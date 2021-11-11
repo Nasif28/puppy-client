@@ -1,0 +1,32 @@
+.foot p {
+    font-weight: 400;
+    color: rgb(126, 126, 126);
+}
+
+.contact li {
+    padding: 2% 0%;
+}
+
+.contact li {
+    padding: 2% 0%;
+    text-decoration: none;
+    list-style: none;
+}
+
+.contact p i {
+    color: #E76F51;
+}
+
+
+.f-2 li {
+    padding: 8% 0%;
+    text-decoration: none;
+    list-style: none;
+}
+
+.rights {
+    background-color: rgb(227, 255, 227);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 1%;
+}
