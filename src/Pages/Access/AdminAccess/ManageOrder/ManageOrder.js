@@ -53,7 +53,9 @@ const ManageOrder = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Contact</th>
-                        <th>Tour PLace</th>
+                        <th>Breed</th>
+                        <th>Status</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 {booking?.map((pd, index) => (
@@ -64,12 +66,14 @@ const ManageOrder = () => {
                             <td>{pd?.email}</td>
                             <td>{pd?.number}</td>
                             <td>{pd?.ordered.name}</td>
-                            <p>
+                            <td>
                                 {(pd.status === 'Approved') ? <button className="btn bg-warning mx-2 text-white">{pd?.status}</button> :
                                     <button onClick={() => handleStatus(pd._id)} className="btn bg-primary mx-2 text-white">{pd?.status}</button>
                                 }
-                            </p>
-                            <button onClick={() => handleDelete(pd._id)} className="btn bg-danger p-2 text-white">Delete</button>
+                            </td>
+                            <td>
+                                <button onClick={() => handleDelete(pd._id)} className="btn bg-danger p-2 text-white">Delete</button>
+                            </td>
                         </tr>
                     </tbody>
                 ))}

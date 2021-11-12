@@ -37,13 +37,15 @@ const ManageBreeds = () => {
 
     return (
         <div className="container lg-mx-5">
-            <h1>Totall Breed: {breeds?.length}</h1>
+            <h2 className="text-success tw-bold mb-3">Manage Breeds</h2>
+            <h3>Totall Breed: {breeds?.length}</h3>
             <Table striped bordered hover responsive>
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Image</th>
                         <th>Name</th>
+                        <th>Remove</th>
                     </tr>
                 </thead>
                 {breeds?.map((pd, index) => (

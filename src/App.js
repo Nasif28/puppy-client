@@ -37,7 +37,7 @@ function App() {
             <Route path="/breeds">
               <Breeds></Breeds>
             </Route>
-
+           
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>

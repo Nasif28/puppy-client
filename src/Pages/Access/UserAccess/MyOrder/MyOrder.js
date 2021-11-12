@@ -38,7 +38,7 @@ const MyOrder = () => {
 
     return (
         <div className="container">
-            <h1>My Bookings: {myBooking?.length}</h1>
+            <h2 className="text-success tw-bold mb-3">My Orders</h2>
             <Table striped bordered hover responsive>
                 <thead>
                     <tr>
