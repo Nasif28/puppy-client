@@ -9,14 +9,12 @@ import AddBreed from './../AdminAccess/AddBread/AddBreed';
 import MakeAdmin from './../AdminAccess/MakeAdmin/MakeAdmin';
 import Payment from '../UserAccess/Payment/Payment';
 import DashboardNav from '../DashboardNav/DashboardNav';
-import useAuth from '../../../Hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 const Dashboard = () => {
-    const { admin } = useAuth();
 
     return (
-        <div className="container">
+        <div className="container mx-auto">
             <AuthProvider>
                 <Router>
                     <DashboardNav></DashboardNav>

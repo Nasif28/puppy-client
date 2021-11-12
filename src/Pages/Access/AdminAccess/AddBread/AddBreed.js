@@ -7,7 +7,7 @@ const AddBreed = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        axios.post('http://localhost:5000/breeds', data)
+        axios.post('https://stormy-woodland-18044.herokuapp.com/breeds', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -18,7 +18,7 @@ const AddBreed = () => {
 
     return (
         <div className="add-service">
-            <h2 className="text-success fw-bolder mt-5">Please Add a Place fo Tourist</h2>
+            <h2 className="text-success fw-bolder mt-5">Please Add a New Breed</h2>
 
             <div className="row">
 
@@ -35,7 +35,7 @@ const AddBreed = () => {
                         <input {...register("img")} placeholder="Img URL" />
                         <textarea {...register("shortDescription")} placeholder="Short Description" />
                         <textarea {...register("description")} placeholder="Full Description" />
-                        <input className="btn btn-success" type="submit" value="Add Place" />
+                        <input className="btn btn-success" type="submit" value="Add Breed" />
                     </form>
                 </div>
 

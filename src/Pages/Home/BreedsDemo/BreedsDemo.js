@@ -9,7 +9,7 @@ const BreedsDemo = (props) => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/breeds')
+        fetch('https://stormy-woodland-18044.herokuapp.com/breeds')
             .then(res => res.json())
             .then(data => {
                 setBreedDemo(data)

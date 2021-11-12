@@ -10,7 +10,7 @@ const MyOrder = () => {
     const [control, setConrol] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user?.email}`)
+        fetch(`https://stormy-woodland-18044.herokuapp.com/myOrder/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setMyBooking(data));
     }, [control, user?.email]);
@@ -20,7 +20,7 @@ const MyOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to cancel?');
         if (proceed) {
-            fetch(`http://localhost:5000/deleteMyOrder/${id}`, {
+            fetch(`https://stormy-woodland-18044.herokuapp.com/deleteMyOrder/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })

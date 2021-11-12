@@ -10,7 +10,7 @@ const ManageOrder = () => {
     const [status, setStatus] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/manageOrder")
+        fetch("https://stormy-woodland-18044.herokuapp.com/manageOrder")
             .then((res) => res.json())
             .then((data) => setBooking(data));
     }, [control, status]);
@@ -20,7 +20,7 @@ const ManageOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/deleteManageOrder/${id}`, {
+            fetch(`https://stormy-woodland-18044.herokuapp.com/deleteManageOrder/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -38,14 +38,15 @@ const ManageOrder = () => {
 
     // HANDLE STATUS
     const handleStatus = (id) => {
-        axios.put(`http://localhost:5000/updateStatus`, { id })
+        axios.put(`https://stormy-woodland-18044.herokuapp.com/updateStatus`, { id })
             .then(res => console.log("Your order Approved"))
             .then((data) => setStatus(true))
     };
 
     return (
         <div className="container">
-            <h1>Totall Bookings: {booking?.length}</h1>
+            <h2 className="text-success tw-bolder mt-3 mb-5">Manage All Order</h2>
+            <h3>Totall Bookings: {booking?.length}</h3>
             <Table striped bordered hover responsive>
                 <thead>
                     <tr>

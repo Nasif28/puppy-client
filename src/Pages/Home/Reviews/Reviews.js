@@ -10,7 +10,7 @@ const Reviews = () => {
     const { user } = useFirebase();
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviewAdd')
+        fetch('https://stormy-woodland-18044.herokuapp.com/reviewAdd')
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

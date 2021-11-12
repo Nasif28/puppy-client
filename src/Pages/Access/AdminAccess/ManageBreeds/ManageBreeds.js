@@ -9,7 +9,7 @@ const ManageBreeds = () => {
     const [control, setConrol] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/breeds")
+        fetch("https://stormy-woodland-18044.herokuapp.com/breeds")
             .then((res) => res.json())
             .then((data) => setBreeds(data));
     }, [control]);
@@ -19,7 +19,7 @@ const ManageBreeds = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to remove this Breed?');
         if (proceed) {
-            fetch(`http://localhost:5000/manageBreeds/${id}`, {
+            fetch(`https://stormy-woodland-18044.herokuapp.com/manageBreeds/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -37,7 +37,7 @@ const ManageBreeds = () => {
 
     return (
         <div className="container lg-mx-5">
-            <h2 className="text-success tw-bold mb-3">Manage Breeds</h2>
+            <h2 className="text-success tw-bolder mt-3 mb-5">Manage Breeds</h2>
             <h3>Totall Breed: {breeds?.length}</h3>
             <Table striped bordered hover responsive>
                 <thead>
