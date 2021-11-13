@@ -27,7 +27,7 @@ const ManageBreeds = () => {
                 .then((data) => {
                     if (data.deletedCount) {
                         setConrol(!control);
-                        alert('deleted successfully');
+                        alert('Breed Removed Successfully');
                     } else {
                         setConrol(false);
                     }

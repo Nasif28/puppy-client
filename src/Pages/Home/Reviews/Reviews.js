@@ -3,6 +3,7 @@ import { Card, Col, Row, Spinner, Container } from 'react-bootstrap';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import './Reviews.css'
+import { Rating } from '@mui/material';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
@@ -28,14 +29,18 @@ const Reviews = () => {
                             reviews?.map(review => (
                                 <Col>
                                     <Card id="review" className="card1 p-3 h-100">
-                                        <Card.Img className="reviewImg w-10 mx-auto border border-success border-2 rounded-circle" src={user?.photoURL} />
+                                        {review?.img ?
+                                            <Card.Img className="reviewImg w-10 mx-auto border border-success border-2 rounded-circle" src={review?.img} />
+                                            :
+                                            <Card.Img className="reviewImg w-10 mx-auto border border-success border-2 rounded-circle" src={'https://dm0qx8t0i9gc9.cloudfront.net/watermarks/image/rDtN98Qoishumwih/scared-cartoon-face-expression_XkDKCZ_SB_PM.jpg'} />
+                                        }
                                         <Card.Body>
                                             <Card.Title className="text-success fw-bold">{review?.name}</Card.Title>
                                             <Card.Text className="">
                                                 <p><small>{review?.email}</small></p>
                                                 <hr />
-
-                                                <p>Rating: {review?.rating}</p>
+                                                <Rating name="read-only" value={review?.rating} readOnly />
+                                                <hr />
                                                 <p>{review?.review}</p>
                                             </Card.Text>
                                         </Card.Body>

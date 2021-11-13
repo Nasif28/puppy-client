@@ -28,7 +28,7 @@ const MyOrder = () => {
                 .then((data) => {
                     if (data.deletedCount) {
                         setConrol(!control);
-                        alert('deleted successfully');
+                        alert('canceled successfully');
                     } else {
                         setConrol(false);
                     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 import AuthProvider from '../../../Contexts/AuthProvider';
 import ManageBreeds from '../AdminAccess/ManageBreeds/ManageBreeds';
 import ManageOrder from '../AdminAccess/ManageOrder/ManageOrder';
@@ -10,6 +10,7 @@ import MakeAdmin from './../AdminAccess/MakeAdmin/MakeAdmin';
 import Payment from '../UserAccess/Payment/Payment';
 import DashboardNav from '../DashboardNav/DashboardNav';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import PrivateRoute from '../../Login/PrivateRoute/PrivateRoute';
 
 const Dashboard = () => {
 
@@ -20,17 +21,17 @@ const Dashboard = () => {
                     <DashboardNav></DashboardNav>
                     <Switch>
 
-                        <Route exact path="/dashboard/payment">
+                        <PrivateRoute exact path="/dashboard/payment">
                             <Payment></Payment>
-                        </Route>
+                        </PrivateRoute>
 
-                        <Route path="/dashboard/myOrders">
+                        <PrivateRoute path="/dashboard/myOrders">
                             <MyOrder></MyOrder>
-                        </Route>
+                        </PrivateRoute>
 
-                        <Route path="/dashboard/reviewAdd">
+                        <PrivateRoute path="/dashboard/reviewAdd">
                             <ReviewAdd></ReviewAdd>
-                        </Route>
+                        </PrivateRoute>
 
                         <AdminRoute path="/dashboard/addBreed">
                             <AddBreed></AddBreed>

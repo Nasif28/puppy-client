@@ -47,7 +47,8 @@ const Order = (props) => {
                     <p>Rank: {breeds?.rank} || Cost: ${breeds?.cost} || Origin: {breeds?.origin} || Color: {breeds?.colors} || Life Span: {breeds?.lifeSpan}</p>
                 </div>
 
-                <div className="col-12 col-md-12 col-lg-4 mt-5">
+                <div className="col-12 col-md-12 col-lg-4">
+                <h3 className="mb-5 fw-bold text-success">Please Confirm the Order by filling the form below:</h3>
                     <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
                         <input defaultValue={user.displayName} {...register("name")} />
                         <input defaultValue={user.email} {...register("email", { required: true })} />

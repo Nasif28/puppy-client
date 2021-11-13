@@ -28,7 +28,7 @@ const Login = () => {
     }
     return (
         <Container>
-            <Typography variant="body1" gutterBottom>Login</Typography>
+            <Typography className="text-success fw-bolder" variant=" h1 body1" gutterBottom>Login</Typography>
             <form onSubmit={handleLoginSubmit}>
                 <TextField
                     sx={{ width: '75%', m: 1 }}
@@ -51,7 +51,7 @@ const Login = () => {
                 <NavLink
                     style={{ textDecoration: 'none', color: 'black'}}
                     to="/register">
-                    If you don't have an account. Please<Button>Register</Button>
+                    If you don't have an account Please<Button>Register</Button>
                 </NavLink>
                 {isLoading && <CircularProgress />}
                 {user?.email && <Alert severity="success">Login successfully!</Alert>}

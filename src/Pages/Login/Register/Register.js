@@ -25,7 +25,7 @@ const Register = () => {
     }
     return (
         <Container>
-            <Typography variant="body1" gutterBottom>Register</Typography>
+            <Typography className="text-success fw-bolder" variant=" h1 body1" gutterBottom>Register</Typography>
             {!isLoading && <form onSubmit={handleLoginSubmit}>
                 <TextField
                     sx={{ width: '75%', m: 1 }}
@@ -62,7 +62,7 @@ const Register = () => {
                 <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
                 <br />
                 <NavLink
-                    style={{ textDecoration: 'none' }}
+                    style={{ textDecoration: 'none', color: 'black' }}
                     to="/login">
                     Already have an Account? Please<Button>Login</Button>
                 </NavLink>
