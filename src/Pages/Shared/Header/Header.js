@@ -14,11 +14,11 @@ const Header = () => {
                     <Navbar.Brand Link as={Link} to="/home" className="fw-bolder text-success">PUPPY</Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-center">
-                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/breeds">Breeds</Nav.Link>
+                        <Nav.Link as={Link} to="/home" className="mx-3">Home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/breeds" className="mx-3">Breeds</Nav.Link>
 
                         {user?.email ?
-                            <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link> : ''}
+                            <Nav.Link as={Link} to="/dashboard" className="mx-3">Dashboard</Nav.Link> : ''}
 
                         {user?.email ?
                             (
