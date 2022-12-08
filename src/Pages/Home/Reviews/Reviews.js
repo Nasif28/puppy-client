@@ -11,7 +11,7 @@ const Reviews = () => {
     const { user } = useFirebase();
 
     useEffect(() => {
-        fetch('https://stormy-woodland-18044.herokuapp.com/reviewAdd')
+        fetch('https://puppy.onrender.com/reviewAdd')
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

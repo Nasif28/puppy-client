@@ -10,7 +10,7 @@ const ManageOrder = () => {
     const [status, setStatus] = useState(false);
 
     useEffect(() => {
-        fetch("https://stormy-woodland-18044.herokuapp.com/manageOrder")
+        fetch("https://puppy.onrender.com/manageOrder")
             .then((res) => res.json())
             .then((data) => setBooking(data));
     }, [control, status]);
@@ -20,7 +20,7 @@ const ManageOrder = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
-            fetch(`https://stormy-woodland-18044.herokuapp.com/deleteManageOrder/${id}`, {
+            fetch(`https://puppy.onrender.com/deleteManageOrder/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
@@ -38,7 +38,7 @@ const ManageOrder = () => {
 
     // HANDLE STATUS
     const handleStatus = (id) => {
-        axios.put(`https://stormy-woodland-18044.herokuapp.com/updateStatus`, { id })
+        axios.put(`https://puppy.onrender.com/updateStatus`, { id })
             .then(res => console.log("Your order Approved"))
             .then((data) => setStatus(true))
     };

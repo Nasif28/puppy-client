@@ -12,7 +12,7 @@ const MakeAdmin = () => {
 
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('https://stormy-woodland-18044.herokuapp.com/users/admin', {
+        fetch('https://puppy.onrender.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

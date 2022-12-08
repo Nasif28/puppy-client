@@ -7,7 +7,7 @@ const AddBreed = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        axios.post('https://stormy-woodland-18044.herokuapp.com/breeds', data)
+        axios.post('https://puppy.onrender.com/breeds', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

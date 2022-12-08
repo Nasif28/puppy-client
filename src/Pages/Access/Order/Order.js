@@ -15,7 +15,7 @@ const Order = (props) => {
     const axios = require('axios');
     
     useEffect(() => {
-        fetch(`https://stormy-woodland-18044.herokuapp.com/breeds/${breedId}`)
+        fetch(`https://puppy.onrender.com/breeds/${breedId}`)
             .then(res => res.json())
             .then(data => setBreeds(data));
     }, [])
@@ -28,7 +28,7 @@ const Order = (props) => {
     const onSubmit = data => {
         data.status = "Panding";
         data.ordered = breeds;
-        axios.post('https://stormy-woodland-18044.herokuapp.com/order', data)
+        axios.post('https://puppy.onrender.com/order', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Ordered Successfully');

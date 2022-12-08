@@ -16,7 +16,7 @@ const ReviewAdd = () => {
     const onSubmit = data => {
         data.rating = value;
         data.img = user?.photoURL;
-        axios.post('https://stormy-woodland-18044.herokuapp.com/reviewAdd', data)
+        axios.post('https://puppy.onrender.com/reviewAdd', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Review Added Successfully');

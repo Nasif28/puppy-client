@@ -9,7 +9,7 @@ const ManageBreeds = () => {
     const [control, setConrol] = useState(false);
 
     useEffect(() => {
-        fetch("https://stormy-woodland-18044.herokuapp.com/breeds")
+        fetch("https://puppy.onrender.com/breeds")
             .then((res) => res.json())
             .then((data) => setBreeds(data));
     }, [control]);
@@ -19,7 +19,7 @@ const ManageBreeds = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to remove this Breed?');
         if (proceed) {
-            fetch(`https://stormy-woodland-18044.herokuapp.com/manageBreeds/${id}`, {
+            fetch(`https://puppy.onrender.com/manageBreeds/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" },
             })
