@@ -6,7 +6,7 @@ import { Table } from 'react-bootstrap';
 
 const ManageOrder = () => {
     const [booking, setBooking] = useState([]);
-    const [control, setConrol] = useState(false);
+    const [control, setControl] = useState(false);
     const [status, setStatus] = useState(false);
 
     useEffect(() => {
@@ -27,10 +27,10 @@ const ManageOrder = () => {
                 .then((res) => res.json())
                 .then((data) => {
                     if (data.deletedCount) {
-                        setConrol(!control);
+                        setControl(!control);
                         alert('deleted successfully');
                     } else {
-                        setConrol(false);
+                        setControl(false);
                     }
                 });
         }

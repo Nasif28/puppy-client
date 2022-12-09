@@ -13,7 +13,7 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand Link as={Link} to="/home" className="fw-bolder text-success">PUPPY</Navbar.Brand>
                     <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-center">
+                    <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={Link} to="/home" className="mx-3">Home</Nav.Link>
                         <Nav.Link as={HashLink} to="/breeds" className="mx-3">Breeds</Nav.Link>
 
@@ -21,7 +21,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/dashboard" className="mx-3">Dashboard</Nav.Link> : ''}
 
                         {user?.email ?
-                            (
+                            
                                 <Navbar.Text className="">
                                     Signed in as: <a href="#login">{user?.displayName}</a>
                                     {user?.photoURL ?
@@ -30,7 +30,7 @@ const Header = () => {
                                     }
                                     <Button onClick={logout} className="btn fw-bolder btn-success me-2">Logout</Button>
                                 </Navbar.Text>
-                            )
+                            
                             :
                             <Nav.Link as={Link} to="/login">Login</Nav.Link>}
 
